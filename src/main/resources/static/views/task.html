@@ -1,0 +1,36 @@
+<div>
+	<section layout="row">
+    	<div flex="20"></div>
+    	<div flex><h2>Task List</h2></div>
+	</section>
+    <section class="buttonRight" layout="row">
+    	<div flex>
+        	<md-button class="md-raised" ng-click="vm.showDialog()">Add Task</md-button>
+        </div>
+    	<div flex="20"></div>
+    </section>
+    <section layout="row">
+    	<div flex="20"></div>
+    	<div flex class="taskFrame">
+		    <div layout="row" class="task" ng-repeat="task in vm.tasks">
+		    	<div flex="90">
+			        <div class="title">{{ task.title }}</div>
+			        <div class="context">{{ task.context }}</div>
+		    	</div>
+		    	<div flex></div>
+		        <div flex="5">
+		        	<md-checkbox 
+		        		ng-checked="task.isFinished" 
+		        		aria-label="Checkbox 1"
+		        		ng-click="vm.clickStatus(task)"
+		        	></md-checkbox>
+		        </div>
+		    </div>
+    	</div>
+    	<div flex="20"></div>
+    </section>
+    <section layout="row">
+    	<div flex="20"></div>
+        <md-button class="md-raised" ng-click="vm.goBack()">Back</md-button>
+    </section>
+</div>

@@ -1,0 +1,59 @@
+body {
+	background-color: rgb(100, 100, 100);
+	color: white;
+}
+
+.buttonRight {
+	text-align: right;
+}
+
+.tableSection {
+	text-align: center;
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 800px;
+}
+
+.table th, .table td {
+	border: 1px solid white;
+}
+
+.link {
+	color: skyblue;
+}
+
+.task {
+	border-radius: 15px;
+	padding: 20px;
+	background-color: white;
+	color: blue;
+	margin: 10px;
+}
+
+.title {
+	font-size: 20px;
+}
+
+.context {
+	font-size: 15px;
+	color: grey;
+}
+
+.nav {
+	background-color: grey;
+	margin: 15px;
+	padding: 10px;
+}
+
+.nav a {
+	font-style: none;
+	color: #eee5f6;
+	padding: 10px;
+}
+
+.nav a:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}

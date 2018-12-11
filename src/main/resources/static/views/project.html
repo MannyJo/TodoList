@@ -1,0 +1,39 @@
+<div id="projectDiv">
+	<section layout="row">
+    	<div flex="20"></div>
+    	<div flex><h2>Project List</h2></div>
+	</section>
+    <section class="buttonRight" layout="row">
+    	<div flex>
+        	<md-button class="md-raised md-primary" ng-click="vm.newProjectClick($event)">New Project</md-button>
+    	</div>
+    	<div flex="20"></div>
+    </section>
+    <section class="tableSection" layout="row">
+    	<div flex="20"></div>
+	    <table class="table" flex>
+	        <thead>
+	            <tr>
+	                <th>ID</th>
+	                <th>Name</th>
+	                <th>Delete</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr ng-repeat="project in vm.projects">
+	                <td>{{ project.id }}</td>
+	                <td><a class="link" href="/#/task/{{ project.id }}">{{ project.projectName }}</a></td>
+	                <td>
+	                	<md-button 
+	                		class="md-raised md-warn" 
+	                		ng-click="vm.deleteButton(project.id)"
+	                	>
+	                		Delete
+	                	</md-button>
+	                </td>
+	            </tr>
+	        </tbody>
+	    </table>
+    	<div flex="20"></div>
+    </section>
+</div>

@@ -1,0 +1,37 @@
+<md-dialog ng-controller="TaskController as vm" aria-label="Mango (Fruit)">
+	<form ng-cloak>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>Mango (Fruit)</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="vm.cancel()">X</md-button>
+			</div>
+		</md-toolbar>
+		
+		<md-dialog-content>
+		<div class="md-dialog-content">
+			<h2>New Task</h2>
+			<div layout="column" style="width: 300px">
+				<md-input-container class="md-block">
+					<label>Title</label>
+					<input ng-model="vm.newTask.title">
+				</md-input-container>
+				<md-input-container class="md-block">
+					<label>Context</label>
+					<input ng-model="vm.newTask.context">
+				</md-input-container>
+			</div>
+		</div>
+		</md-dialog-content>
+		
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button class="md-warn" ng-click="vm.hide()">
+				Cancel
+			</md-button>
+			<md-button class="md-primary" ng-click="vm.answer(vm.newTask)">
+				Add
+			</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>
